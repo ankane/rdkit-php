@@ -32,7 +32,9 @@ composer install
 Create a molecule
 
 ```php
-$mol = RDKit\Molecule::fromSmiles('c1ccccc1O');
+use RDKit\Molecule;
+
+$mol = Molecule::fromSmiles('c1ccccc1O');
 ```
 
 Get the number of atoms
@@ -44,7 +46,7 @@ $mol->numAtoms();
 Get substructure matches
 
 ```php
-$mol->match(RDKit\Molecule::fromSmarts('ccO'));
+$mol->match(Molecule::fromSmarts('ccO'));
 ```
 
 Get fragments
@@ -159,7 +161,9 @@ $mol->toJson();
 Create a reaction
 
 ```php
-$rxn = RDKit\Reaction::fromSmarts('[CH3:1][OH:2]>>[CH2:1]=[OH0:2]');
+use RDKit\Reaction;
+
+$rxn = Reaction::fromSmarts('[CH3:1][OH:2]>>[CH2:1]=[OH0:2]');
 ```
 
 Generate an SVG

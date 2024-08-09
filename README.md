@@ -12,10 +12,19 @@ Run:
 composer require ankane/rdkit
 ```
 
-And download the shared library:
+Add scripts to `composer.json` to download the shared library:
+
+```json
+    "scripts": {
+        "post-install-cmd": "RDKit\\Vendor::check",
+        "post-update-cmd": "RDKit\\Vendor::check"
+    }
+```
+
+And run:
 
 ```sh
-composer exec -- php -r "require 'vendor/autoload.php'; RDKit\Vendor::check();"
+composer install
 ```
 
 ## Getting Started

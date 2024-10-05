@@ -69,15 +69,15 @@ class Molecule
 
     public function fragments($sanitize = true)
     {
-        try {
-            $szArr = $this->ffi->new('size_t*');
-            $numFrags = $this->ffi->new('size_t');
-            $details = [
-                'sanitizeFrags' => $sanitize
-            ];
-            $arr = $this->ffi->get_mol_frags($this->getPtr(), $this->sz->cdata, \FFI::addr($szArr), \FFI::addr($numFrags), $this->toDetails($details), null);
-            $this->checkPtr($arr);
+        $szArr = $this->ffi->new('size_t*');
+        $numFrags = $this->ffi->new('size_t');
+        $details = [
+            'sanitizeFrags' => $sanitize
+        ];
+        $arr = $this->ffi->get_mol_frags($this->getPtr(), $this->sz->cdata, \FFI::addr($szArr), \FFI::addr($numFrags), $this->toDetails($details), null);
+        $this->checkPtr($arr);
 
+        try {
             $fragments = [];
             for ($i = 0; $i < $numFrags->cdata; $i++) {
                 $ptr = $arr[$i];

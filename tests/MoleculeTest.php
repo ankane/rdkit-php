@@ -244,7 +244,7 @@ final class MoleculeTest extends TestCase
     {
         $mol = Molecule::fromSmiles('Cc1ccccc1');
         $data = json_decode($mol->toJson());
-        $this->assertEquals(11, $data->rdkitjson->version);
+        $this->assertEquals(12, $data->rdkitjson->version);
     }
 
     public function testToSvg()

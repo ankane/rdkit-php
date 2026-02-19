@@ -5,14 +5,16 @@ namespace RDKit;
 class Pointer
 {
     public $ptr;
+    private $free;
 
-    public function __construct($ptr)
+    public function __construct($ptr, $free)
     {
         $this->ptr = $ptr;
+        $this->free = $free;
     }
 
     public function __destruct()
     {
-        FFI::instance()->free_ptr($this->ptr);
+        ($this->free)($this->ptr);
     }
 }

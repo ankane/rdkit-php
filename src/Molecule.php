@@ -278,7 +278,7 @@ class Molecule
             throw new \InvalidArgumentException('invalid input');
         }
 
-        $this->ptr = new Pointer($ptr);
+        $this->ptr = new Pointer($ptr, $this->ffi->free_ptr);
         $this->sz = $sz;
     }
 

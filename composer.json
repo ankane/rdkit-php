@@ -31,6 +31,7 @@
     },
     "scripts": {
         "test": "phpunit tests",
+        "valgrind": "valgrind --leak-check=full --trace-children=yes --error-exitcode=1 --quiet phpunit tests",
         "post-install-cmd": "RDKit\\Vendor::check",
         "post-update-cmd": "RDKit\\Vendor::check"
     }

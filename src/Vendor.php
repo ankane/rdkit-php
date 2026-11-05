@@ -4,32 +4,32 @@ namespace RDKit;
 
 class Vendor
 {
-    public const VERSION = '2025.09.1';
+    public const VERSION = '2026.09.2';
 
     public const PLATFORMS = [
         'x86_64-linux' => [
             'file' => 'rdkit-{{version}}-x86_64-linux',
-            'checksum' => '2ce0732caedcc86882a634035a7c99a38638645a39eb0ebedc9e6af4c1bf1e57',
+            'checksum' => '4646c9f5767ea60824b4e2f750ab8d7ed1a8150341d626345e0aa87c3c47f138',
             'lib' => 'librdkitcffi.so'
         ],
         'aarch64-linux' => [
             'file' => 'rdkit-{{version}}-aarch64-linux',
-            'checksum' => 'c4e815e8c9c8ec5d159d7bf7dc9274c79d74acad24a51f268d9f40f6f7b51e56',
+            'checksum' => 'c8bb5ba3e03900f2656bb93b0fbf56839da8e8fb91bf08e22a1f9d1da5d1720a',
             'lib' => 'librdkitcffi.so'
         ],
         'x86_64-darwin' => [
             'file' => 'rdkit-{{version}}-x86_64-darwin',
-            'checksum' => '8ac1176a9cec3d37afaf208df09e8118994637083abc0db94a44df68f073c846',
+            'checksum' => '169ffdbfed2a59425e6777ad598ed64c7b8f6de0de7100b19ce7de2a8d127bc6',
             'lib' => 'librdkitcffi.dylib'
         ],
         'arm64-darwin' => [
             'file' => 'rdkit-{{version}}-aarch64-darwin',
-            'checksum' => 'df4448ee962cfcfd1adabcfb70b6b4e4fc0289c4cc55bacf4a431e8bf0489b0b',
+            'checksum' => 'cd9b43d9db36dce77ab68efeeaa9c8196d8393bba4fa12dac496c411384f4bab',
             'lib' => 'librdkitcffi.dylib'
         ],
         'x64-windows' => [
             'file' => 'rdkit-{{version}}-x86_64-windows',
-            'checksum' => 'b37af610b9fdde2a2e5dee65c2e37fa3b524b52b9c4d69b00562f7906fa08f17',
+            'checksum' => 'a01a899f0275dab415f687268c1093ce935bc397b88af597cdbf664df0680cc3',
             'lib' => 'rdkitcffi.dll'
         ]
     ];

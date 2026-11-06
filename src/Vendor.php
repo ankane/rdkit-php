@@ -29,7 +29,7 @@ class Vendor
         ],
         'x64-windows' => [
             'file' => 'rdkit-{{version}}-x86_64-windows',
-            'checksum' => 'a01a899f0275dab415f687268c1093ce935bc397b88af597cdbf664df0680cc3',
+            'checksum' => '3fe959ef6ca01ed6bbdaabd7ad7ef50d49b73801950310b047ebb5af995e6047',
             'lib' => 'rdkitcffi.dll'
         ]
     ];
